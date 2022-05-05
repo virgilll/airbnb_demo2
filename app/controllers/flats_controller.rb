@@ -1,6 +1,10 @@
 class FlatsController < ApplicationController
   def index
-    @flats = Flat.all
+    if params[:city] && params[:city] != ""
+      @flats = Flat.search_by_location(params[:city])
+    else
+      @flats = Flat.all
+    end
   end
 
   def show

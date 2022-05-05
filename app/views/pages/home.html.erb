@@ -1,54 +1,14 @@
-
-<!-- Nav bar -->
-
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid" style= "padding: 25px;">
-    <a class="navbar-brand" href="#">
-      <img src="https://cdn-icons-png.flaticon.com/128/1946/1946488.png"/>
-</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-          <li class="nav-item active" style= "padding-right: 20px;" style="padding-top:8px;">
-            <%= link_to "Home", root_path %>
-          </li>
-          <li class="nav-item" style= "padding-right: 20px;" style="padding-top:8px;">
-            <%= link_to "Log In", new_user_session_path %>
-          </li>
-           <li class="nav-item" style= "padding-right: 20px;" style="padding-top:8px;">
-            <%= link_to "Sign up", new_user_registration_path %>
-          </li>
-          <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">My Profile</a>
-              <a class="dropdown-item" href="#">Settings</a>
-            </div>
-          </li>
-          <!--li class="nav-item"-->
-          <!--/li-->
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- The Nav Bar ends -->
-
-<!-- The Search bar in the middle of page -->
-<a class="btn btn-flat" href="#">Book now</a>
-
-
-
 <!-- The main picture -->
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1551927411-95e412943b58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1498&q=80); height:80vh; background-position:center; d:cover;">
-  <div class="container" style="display:relative;">
-    <h1 style="color:white; d:absolute; position-left:300;">Our app brings <strong>local flats</strong> to <strong>travelers and cool people</strong>!</h1>
-    <p style="color:gray; ">Change your life by taking part in a local experience</p>
-    <a style="color:gray;" class="btn btn-flat" href="#">Start Looking for flats now</a>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1499796683658-b659bc751db1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80); height:80vh; background-position:center;">
+  <div class="changedcontainer">
+    <h1 style="color:white; padding-top:30px; margin-left:15px;">Our app brings <strong>local flats</strong> to <strong>travelers and cool people</strong></h1>
+    <p style="color:white; font-size:19px; padding-top:30px; margin-left:50px;">Change your life by taking part in a local experience</p>
+    <p style="color:white; font-size:19px; padding-top:30px; padding-bottom:15px; margin-left:50px;">Start Looking for flats now</p>
+    <form action= <%= flats_path %> method = "GET" style="margin-left:45px; border-radius:50px; font-size:1rem; line-height:30px;">
+      <label for="search city"></label><br>
+      <input type="text" id="city" name="city" value="" placeholder="search for a city">
+      <input type="submit" value="Submit" class="btn btn-light" style="line-height:22px;">
+    </form>
   </div>
 </div>
-
-<!-- ends here -->

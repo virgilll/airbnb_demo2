@@ -6,14 +6,25 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Flat.destroy_all
 
+users = []
+5.times do
+  users << User.create!(
+    email: Faker::Internet.email,
+    password: Faker::Blockchain::Ethereum.address,
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name
+  )
+end
 
 25.times do
-  Flat.create(
+  Flat.create!(
     title: Faker::Book.title,
     address: Faker::Movies::Hobbit.location,
-    dates: Faker::Date.between(from: Date.today, to: 1.year.from_now),
     price: Faker::Number.within(range: 100..3000),
-    description: Faker::Quote.famous_last_words
+    description: Faker::Quote.famous_last_words,
+    user: users.sample
   )
 end

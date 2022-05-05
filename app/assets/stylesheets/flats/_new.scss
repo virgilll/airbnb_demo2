@@ -2,19 +2,18 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
 * {
 box-sizing: border-box;
-font-family: Helvetica;
 }
-body {
-background-color: #fff;
-color: #444;
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 18px;
-font-weight: 400;
-margin: 0;
-padding: 0;
-}
+// body {
+// background-color: #fff;
+// color: #444;
+// display: flex;
+// justify-content: center;
+// align-items: center;
+// font-size: 18px;
+// font-weight: 400;
+// margin: 0;
+// padding: 0;
+// }
 .wrap {
 margin: 15px;
 max-width: 600px;
@@ -112,21 +111,21 @@ padding: 1em;
 display: inline-block;
 float: right;
 }
-label,
-textarea {
-    font-size: .8rem;
-    letter-spacing: 1px;
-}
-textarea {
-    padding: 10px;
-    max-width: 100%;
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
-}
+// label,
+// textarea {
+//     font-size: .8rem;
+//     letter-spacing: 1px;
+// }
+// textarea {
+//     padding: 10px;
+//     max-width: 100%;
+//     line-height: 1.5;
+//     border-radius: 5px;
+//     border: 1px solid #ccc;
+//     box-shadow: 1px 1px 1px #999;
+// }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-}
+// label {
+//     display: block;
+//     margin-bottom: 10px;
+// }
