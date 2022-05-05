@@ -5,12 +5,12 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @flat = flat.find(params[:id])
+    @flat = Flat.find(params[:flat_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.flat = @flat
     if @booking.save
-      redirect_to flat_path(@flat.id)
+      redirect_to user_path(current_user)
     else
       render :new
     end
