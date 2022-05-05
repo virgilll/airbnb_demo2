@@ -10,25 +10,28 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item" style= "padding-right: 20px;" style="padding-top:8px;">
-            <%= link_to "Log In", new_user_session_path, style:"text-decoration:none; color:gray;" %>
+            <% if !user_signed_in? %>
+              <%= link_to "Log In", new_user_session_path, style:"text-decoration:none; color:gray;" %>
+          <%# </li>
+           <li class="nav-item" style= "padding-right: 20px;" style="padding-top:8px;"> %>
+              <%= link_to "Sign up", new_user_registration_path, style:"text-decoration:none; color:gray;"%>
+              <% end %>
           </li>
-           <li class="nav-item" style= "padding-right: 20px;" style="padding-top:8px;">
-            <%= link_to "Sign up", new_user_registration_path, style:"text-decoration:none; color:gray;"%>
-          </li>
-          <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" />
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <% if current_user %>
-              <%= link_to "My Profile", user_path(current_user)%>
-            <% end %>
-              <a class="dropdown-item" href="#">Settings</a>
-            </div>
-          </li>
+          <% if user_signed_in? %>
+            <li class="nav-item dropdown">
+              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" />
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "My Profile", user_path(current_user), class: "dropdown-item"%>
+                <%= link_to "Log Out",  destroy_user_session_path, class: "dropdown-item", :method => 'delete' %>
+                <%# <a class="dropdown-item" href="#"> %>
+                <%# destroy_user_session_path(current_user) %>
+                <%# <a class="dropdown-item" href="#">Settings</a> %>
+              </div>
+            </li>
+          <% end %>
           <!--li class="nav-item"-->
           <!--/li-->
       </ul>
     </div>
   </div>
 </div>
-
-

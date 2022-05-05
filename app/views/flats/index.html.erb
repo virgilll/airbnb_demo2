@@ -6,12 +6,13 @@
 <div class="container">
   <div class="row" >
     <% @flats.each do |flat| %>
-      <div class="col-md-4 col-sm-6 mt-3">
+      <div class="col-md-4 col-sm-6 mt-3" style="max-width: 1450px;">
         <div class="drone-cards mx-3 h-100">
           <img src="https://images.unsplash.com/photo-1469796466635-455ede028aca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80">
-          <div class="drone-cards-info">
-            <%= link_to flat.title, flat_path(flat), class: "text-decoration-none" %>
-            <p><%= flat.description %></p>
+          <div class="drone-cards-info" style="display:relative;">
+            <%= link_to flat.title, flat_path(flat), class:"text-decoration-none" %>
+            <p> Description: <%= flat.description %></p>
+            <p class="p-index" style="display:absolute; top:20px;"> Location: <%= flat.address %></p>
           <!-- <p>Short description here!</p> -->
           </div>
         </div>

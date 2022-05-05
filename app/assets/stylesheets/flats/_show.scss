@@ -1,0 +1,49 @@
+.middleofpage {
+display:relative;
+}
+
+.card{
+  background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1469796466635-455ede028aca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80);
+  margin-top:80px;
+  display:relative;
+  height:auto;
+  background-size:cover;
+  opacity:0.7;
+  height: 70vh;
+}
+#hi{
+  margin-left: 55px;
+  margin-top: 30px;
+}
+.informationbox{
+  background: ghostwhite;
+  top:100px;
+  left: 75px;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid lightgray;
+  width:325px;
+  height: 250px;
+  border-radius:25px;
+  padding-left:10px;
+}
+.pricebox{
+  background: ghostwhite;
+  font-size: 16px;
+  margin-left: 55px;
+  margin-top: 250;
+  border: 1px solid lightgray;
+  width:325px;
+  height: 250px;
+  border-radius:25px;
+}
+.elem-group-inlined{
+  padding-bottom: 22px;
+  padding-top:15px;
+  margin-left: 60px;
+}
+#map{
+  height:40vh;
+  width: 100%;
+  border-radius: 25px;
+  }
