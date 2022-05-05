@@ -19,7 +19,7 @@
           </li>
           <% if user_signed_in? %>
             <li class="nav-item dropdown">
-              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" />
+              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://philberk.github.io/profile/profilepic.jpeg" />
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "My Profile", user_path(current_user), class: "dropdown-item"%>
                 <%= link_to "Log Out",  destroy_user_session_path, class: "dropdown-item", :method => 'delete' %>
